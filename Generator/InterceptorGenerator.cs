@@ -14,7 +14,7 @@ namespace Common.Interception
         public void Execute(GeneratorExecutionContext context)
         {
 				var sb = new StringBuilder();
-                sb.AppendLine("{}");
+                sb.AppendLine("namespace Foo{ class Foo{}}");
                 context.AddSource(new Guid().ToString("N")+".cs", sb.ToString());
         }
 
